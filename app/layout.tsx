@@ -3,7 +3,7 @@ import { Nunito } from "next/font/google";
 import './globals.css'
 import Navbar from "@/app/components/navbar/Navbar";
 import ClientOnly from "@/app/components/ClientOnly";
-import Modal from "@/app/components/modals/Modal";
+import RegisterModal from "./components/modals/RegisterModal";
 
 export const metadata = {
   title: 'Airbnb',
@@ -24,8 +24,7 @@ export default function RootLayout({
       <body className={font.className}>
         {/* ClientOnly component is using for Prevent Hydration Error */}
         {/* <ClientOnly> */}
-        <Modal actionLabel="Submit" title="Hello" isOpen />
-        {/* <Modal actionLabel="" body={} disbaled footer={ } isOpen={ } onClose={ } onSubmit={ } secondaryAction={ } secondaryLabel="" title="" key={ } /> */}
+        <RegisterModal />
         <Navbar />
         {/* </ClientOnly> */}
         {children}
